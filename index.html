@@ -109,25 +109,21 @@
       >. Coded by <a href="#">Your Name Here</a>.
     </div> -->
     <script>
+      // Add selectors
       const button = document.querySelector(".share");
       const main = document.querySelector(".main");
       const second = document.querySelector(".second");
       const shareIcon = document.querySelector(".share-icon");
       const contact = document.querySelector(".contact");
 
-      console.log(shareIcon.style);
+      // Add event listener on share-icon
       button.addEventListener("click", (event) => {
+        // Swao between main and second div showing
         main.classList.toggle("hidden");
         second.classList.toggle("hidden");
-        if (shareIcon.style.fill === "white") {
-          shareIcon.style.fill = "#6E8098";
-          button.style.backgroundColor = "var(--light-grayish-blue)";
-          contact.style.backgroundColor = "";
-        } else {
-          shareIcon.style.fill = "white";
-          button.style.backgroundColor = "var(--desaturated-dark-blue)";
-          contact.style.backgroundColor = "var(--very-dark-grayish-blue)";
-        }
+        shareIcon.classList.toggle("share-icon-active");
+        button.classList.toggle("share-active");
+        contact.classList.toggle("contact-active");
       });
     </script>
   </body>
