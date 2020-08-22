@@ -22,7 +22,11 @@
     <style>
       .attribution {
         font-size: 11px;
+        width: 100%;
         text-align: center;
+        position: absolute;
+        bottom: 0;
+        padding: 10px 0;
       }
 
       .attribution a {
@@ -84,12 +88,6 @@
           </a>
           </div>
           <div class="share">
-            <!-- <img
-                src="images/icon-share.svg"
-                width="17"
-                height="13"
-                alt="Share Icon"
-              /> -->
             <svg xmlns="http://www.w3.org/2000/svg" width="15" height="13">
               <path
                 class="share-icon"
@@ -102,28 +100,24 @@
       </div>
     </div>
 
-    <!-- <div class="attribution">
+    <div class="attribution">
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
         >Frontend Mentor</a
-      >. Coded by <a href="#">Your Name Here</a>.
-    </div> -->
+      >. Coded by <a href="https://www.frontendmentor.io/profile/BenSeagrave" target="_blank">Ben Seagrave</a>.
+    </div>
     <script>
       // Add selectors
       const button = document.querySelector(".share");
-      const main = document.querySelector(".main");
       const second = document.querySelector(".second");
       const shareIcon = document.querySelector(".share-icon");
-      const contact = document.querySelector(".contact");
 
-      // Add event listener on share-icon
+      // Add click event listener on share-icon
       button.addEventListener("click", (event) => {
-        // Swao between main and second div showing
-        main.classList.toggle("hidden");
+        // Swap between main and second div showing
         second.classList.toggle("hidden");
         shareIcon.classList.toggle("share-icon-active");
-        button.classList.toggle("share-active");
-        contact.classList.toggle("contact-active");
+        button.classList.toggle("share-active"); 
       });
     </script>
   </body>
