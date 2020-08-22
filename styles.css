@@ -124,6 +124,7 @@ body {
     width: 285px;
     height: auto;
     height: 100%;
+    border-radius: 10px 0 0 10px;
   }
   .content h3 {
     font-size: 1.25rem;
